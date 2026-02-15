@@ -1,0 +1,489 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url("images/background.jpg") no-repeat center center;
+    background-size: cover;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    flex-shrink: 0;
+}
+
+header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 88%;
+    height: 6vh;
+    margin: 3vh 6% 3vh 6%;
+}
+
+#profile {
+    display: flex;
+    float: left;
+    background: grey url("images/user.png") no-repeat center;
+    background-size: cover;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 20%;
+    margin-right: 25.5vh;
+    flex-shrink: 0;
+}
+
+#authorisation {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    gap: 2vh;
+    flex-shrink: 0;
+}
+
+#authorisation a:first-of-type {
+    background-color: #485935;
+    color: #fbfbfb;
+    border-style: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#authorisation a:last-of-type {
+    color: #000000;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#authorisation a {
+    text-decoration: none;
+    display: block;
+    border-radius: 3vh;
+    border: 0.2vh solid black;
+    padding: 1vh 3.7vh;
+    background-color: #fbfbfb;
+    font-weight: bolder;
+    text-align: center;
+    font-family: "Roboto Light", serif;
+    font-size: 2.2vh;
+}
+
+
+#authorisation a:first-of-type:hover {
+    color: #93A267;
+    transform: scale(120%);
+}
+
+#authorisation a:last-of-type:hover {
+    color: #485935;
+    transform: scale(120%);
+}
+
+#nav {
+    list-style: none;
+    display: inline-flex;
+    text-align: center;
+    width: auto;
+    height: 6vh;
+    float: left;
+}
+
+#nav li {
+    line-height: 6vh;
+    float: left;
+    display: inline-flex;
+    padding: 0 1.7vh;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+#nav a {
+    text-decoration: none;
+    line-height: 6vh;
+    font-family: "Roboto Light", sans-serif;
+    padding: 0 1.7vh;
+    font-size: 1.6vh;
+    color: black;
+}
+
+#nav li.active {
+    border-bottom: 0.2vh solid black;
+}
+
+#nav li:not(.active):hover {
+    border-bottom: solid black;
+    transform: scale(120%);
+    border-bottom: 0.2vh solid black;
+}
+
+#big_topic {
+    display: flex;
+    background-color: grey;
+    align-items: center;
+    background-image: url("images/main_image.JPG");
+    background-size: cover;
+    background-position: center center;
+    width: 88%;
+    height: 42.5vh;
+    border-radius: 2.5vh;
+    margin: 0 6%;
+}
+
+#indicator {
+    display: flex;
+    list-style: none;
+    gap: 2.5vh;
+    align-items: end;
+    height: 100%;
+    width: 25vw;
+    margin-bottom: 3%;
+    margin-left: 8%;
+}
+
+#indicator li {
+    height: 1.3vh;
+    background: #838282;
+    width: 6vw;
+    border-radius: 2.5vh;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#indicator li.active {
+    background: #fbfbfb;
+}
+
+#big_topic button {
+    color: #485935;
+    position: absolute;
+    border-style: none;
+    font-size: 6vh;
+    font-weight: bolder;
+    background: transparent;
+    left: 3%;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#big_topic button:hover {
+    color: #93A267;
+    transform: translateX(0.3vw) scale(150%);
+}
+
+#big_topic button:first-of-type:hover {
+    color: #93A267;
+    transform: translateX(-0.3vw) scale(150%);
+}
+
+#big_topic button:last-of-type {
+    position: absolute;
+    left: 95%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+}
+
+#content\ block {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    margin: 1% 6%;
+    width: 88%;
+    height: 41.6vh;
+}
+
+#titles {
+    display: inline-flex;
+    width: auto;
+}
+
+
+#titles p {
+    padding-left: 1%;
+    color: black;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 2.5vh;
+}
+
+#titles p:last-of-type {
+    margin-left: 17.6vw;
+}
+
+#images {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4vw;
+    width: auto;
+}
+
+#previous\ paintings {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2.1vw;
+    width: auto;
+}
+
+#images div {
+    display: inline-flex;
+    align-items: end;
+    border-radius: 3.1vh;
+    background-image: url("images/previous_painting.JPG");
+    background-size: cover;
+    background-position: center center;
+    height: 29.1vh;
+    width: 11vw;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#images div::after {
+    content: '';
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgb(72, 89, 53, 0.3) 50%,
+            rgba(72, 89, 53, 0.8) 100%
+    );
+    pointer-events: none;
+}
+
+#images div:nth-child(2)::after {
+    background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(147, 162, 103, 0.3) 50%,
+            rgba(147, 162, 103, 0.8) 100%
+    );
+    pointer-events: none;
+}
+
+#images div:last-of-type {
+    background-image: url("images/previous_painting2.JPG");
+    background-size: cover;
+    background-position: center center;
+}
+
+#previous\ paintings a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    width: 23.4vw;
+    height: 5vh;
+    border-radius: 3.1vh;
+    border-style: none;
+    background: #efefef;
+    font-size: 2.5vh;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+#previous\ paintings a:hover {
+    color: #93A267;
+    background: #485935;
+}
+
+#categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7vh;
+}
+
+#categories button {
+    display: flex;
+    border-style: none;
+    align-items: center;
+    justify-content: start;
+    border-radius: 1.9vh;
+    height: 6.3vh;
+    width: 25.8vw;
+    transition: transform 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#categories button a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    line-height: 6.3vh;
+    font-family: "Roboto Light", sans-serif;
+    font-weight: normal;
+    font-size: 1.7vh;
+}
+
+#categories div {
+    background: url("https://img.icons8.com/ios/30/pin3.png");
+    background-size: 100%;
+    display: inline-block;
+    height: 3.7vh;
+    width: 3.6vh;
+    border-radius: 100%;
+    margin: 0 2vh;
+}
+
+#categories button:first-of-type {
+    background: #e1f1de;
+}
+
+#categories button:last-of-type {
+    background: #efefef;
+}
+
+#categories button:nth-child(2) {
+    background: #dcebca;
+}
+
+#categories button:nth-child(3) {
+    background: #93a267;
+}
+
+#categories button:nth-child(4) {
+    background: #485935;
+}
+
+#categories button:hover {
+    transform: scale(105%);
+}
+
+#info_additional_arts li {
+    list-style: none;
+    height: 18.3vh;
+    width: 13.6vw;
+    border-radius: 3.1vh;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background: grey url("images/Hobby.JPG") no-repeat center -3vh;
+    background-size: cover;
+}
+
+#info_additional_arts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4vw;
+}
+
+
+#info_additional_arts li:first-of-type {
+    background: url("https://images.fooby.ru/2/17/54/5826504") center top;
+    background-size: cover;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    gap:2.7vh;
+}
+
+#info li {
+    padding-top: 1.3vh;
+    list-style: none;
+    width: 21vw;
+    height: 9.7vh;
+    background: #efefef;
+    border-radius: 1.9vh;
+    padding-left: 1vw;
+    font-weight: bold;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 2vh;
+}
+
+#info li p {
+    font-weight: normal;
+    font-size: 1.7vh;
+    padding-top: 0.3vh;
+    padding-right: 0.5vw;
+    font-family: "Roboto Light", sans-serif;
+}
+
+#fursone {
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    border-style: none;
+    right: 0.1vw;
+    top: -2.5vh;
+    background: url("images/paws.PNG") no-repeat center -3.7vh;
+    background-size: cover;
+}
+
+#fursone.relax {
+    animation: motion 7s ease-in-out infinite alternate;
+}
+
+#fursone.is_clicked {
+    animation: fall 2s ease-in-out;
+}
+
+#fursone.is_appeared {
+    animation: appearence 2s ease-in-out forwards;
+}
+
+#fursone p {
+    opacity: 0;
+    position: relative;
+    left: -10vw;
+    top: -10vh;
+    text-align: left;
+    padding: 1.8vh;
+    background-color: #fbfbfb;
+    border-radius: 3.1vh 3.1vh 0 3.1vh;
+    width: 10vw;
+    height: 5vw;
+    pointer-events: none;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+#fursone p.talk {
+    display: block;
+    animation: talking 6s ease-in-out alternate;
+}
+
+@keyframes talking {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes appearence {
+    from {
+        transform: translateY(105vh);
+    }
+    to {
+        transform: translate(0, 83vh);
+    }
+}
+
+
+@keyframes fall {
+    to {
+        transform:translateY(105vh);
+    }
+}
+
+@keyframes motion {
+    from {
+        transform:rotate(15deg) ;
+        transform-origin: center top;
+    }
+    to {
+        transform:rotate(-15deg);
+        transform-origin: center top;
+    }
+}

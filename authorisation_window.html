@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <link rel="stylesheet" href="authorisation.css">
+    <script src="authorisation.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="show" id="authorise_section">
+            <div>
+                <a href="index.html"></a>
+                <label>Введите данные для входа</label>
+            </div>
+
+            <div>
+                <input id="Email" type="email" placeholder="example@gmail.com" title="Поле для ввода электронного адреса">
+                <input id="Password" type="password" placeholder="********" minlength="8" maxlength="16" title="Поле для ввода пароля">
+                <input class="confirm_button" type="submit" value="Войти">
+                <button id="forget_password">забыли пароль?</button>
+            </div>
+        </div>
+
+
+        <div id="reset_passwordMenu">
+            <div>
+                <a href="index.html"></a>
+                <label>Сброс пароля</label>
+            </div>
+            <div>
+                <input id="reset_password" type="email" title="Введите адрес электронной почты" placeholder="example@gmail.com">
+                <input id="reset_confirm" class="confirm_button" type="submit" value="Подтвердить">
+            </div>
+        </div>
+
+        <div id="Confirm">
+            <div>
+                <a href="index.html"></a>
+                <label>Подтвердите свой email-адрес</label>
+            </div>
+            <div>
+                <input type="text" placeholder="123 456" title="Подтвердите свой email-адрес с помощью шестизначного кода, отправленного на ваш почтовый адрес">
+                <input id="confirm_password_button" class="confirm_button" type="submit" value="Подтвердить">
+            </div>
+        </div>
+
+        <div id="reset">
+            <div>
+                <a href="index.html"></a>
+                <label>Введите новый пароль</label>
+            </div>
+            <div>
+                <input type="password" placeholder="********" minlength="8" maxlength="16" title="Поле для ввода нового пароля">
+                <input id="final_confirm" class="confirm_button" type="submit" value="Подтвердить">
+            </div>
+        </div>
+
+        <div id="message">
+            <div>
+                <a href="index.html"></a>
+                <label>Пароль успешно изменен</label>
+            </div>
+            <a id="refactoring" class="confirm_button" href="authorisation_window.html">Авторизация</a>
+        </div>
+    </main>
+
+</body>
+</html>

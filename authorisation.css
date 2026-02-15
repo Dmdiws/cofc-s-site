@@ -1,0 +1,228 @@
+html {
+    background: url("images/regi-auto-background.JPG") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:10% 6%;
+}
+
+#authorise_section {
+    display: none;
+}
+
+#authorise_section.show {
+    display: flex;
+    flex-direction: column;
+    gap:45px;
+}
+
+
+div:nth-child(1) {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+
+div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    align-items: center;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 38px;
+    gap: 45px;
+    width: 30%;
+    height: 40%;
+    left: 643px;
+    top: 251px;
+    background: #A5AB8D;
+    border-radius: 30px;
+}
+
+a:not(#refactoring) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(103, 100, 100, 0.1) url("images/back_button.png") no-repeat center center;
+    background-size: 80%;
+    border-radius: 15px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    transition: background-color 0.5s ease;
+}
+
+a:not(#refactoring):hover {
+    background-color: #7e9365;
+}
+
+label {
+    font-family: "Roboto Light", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input {
+    border: none;
+    color: black;
+    border-radius: 15px;
+    padding: 1% 0;
+    text-align: center;
+    background: #fbfbfb;
+    width: 100%;
+    height: 50px ;
+    font-size: 24px;
+}
+
+.confirm_button  {
+    height: 50px ;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    width: auto;
+    color: black;
+    background: #fbfbfb;
+    padding: 0px 25px;
+    border-radius: 25px;
+    transition: background-color 0.5s ease;
+}
+
+input:hover , input:not(:hover) {
+    outline: none;
+}
+
+::placeholder {
+    color: #C1C1C1;
+}
+
+
+.confirm_button:hover {
+    background-color: #485935;
+    color: #93A267;
+}
+
+button {
+    background: none;
+    border-style: none;
+    font-size: 28px;
+    color: rgb(81, 81, 81, 0.66);
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+button:hover {
+    color: rgba(81, 81, 81);
+}
+
+#reset_passwordMenu {
+    display: none;
+}
+
+#reset_passwordMenu div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:20px;
+}
+
+#reset_passwordMenu div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+    width:100%;
+}
+
+#reset_passwordMenu.show {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:45px;
+}
+
+#Confirm {
+    display: none;
+}
+
+#Confirm.show {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:45px;
+}
+
+#Confirm div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:20px;
+}
+
+#Confirm div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+    width:100%;
+}
+
+#reset {
+    display: none;
+}
+
+#reset.show {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:45px;
+}
+
+#reset div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:20px;
+}
+
+#reset div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:16px;
+    width:100%;
+}
+
+#message {
+    display: none;
+}
+
+#message.show {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:45px;
+}
+
+#message div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:20px;
+}

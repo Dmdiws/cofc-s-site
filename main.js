@@ -1,8 +1,8 @@
 const box = document.getElementById('fursone');
 
 let hasFallen = false;
-let phrases = ["I feel so sigma", "Че вылупился?", "Что-то не устраивает?", "Welcome to my island"];
-let i = 0;
+let phrases = ["Hamster","Noga","Family","I feel so sigma", "Че вылупился?", "Что-то не устраивает?", "Welcome to my island", "Пяточки","жиртретский ищет себе курицу\n" +
+"ухх... курица.. 🍗🍗где она... 🍗🍗🍗🍗где.. 🍗🍗🍗О🍗🍗🍗курица🍗🍗","Пепе Шнеле ФААААААА","Привет! Я твоя персональная роблокс-фурри подруга на один час!", "C днем отказа от душа", "Как называется игрок, постоянно забывающий во что играет? Альцгеймер"];
 box.addEventListener('click', () => {
     if (!hasFallen) {
         hasFallen = 1;
@@ -14,7 +14,7 @@ box.addEventListener('click', () => {
         box.style.pointerEvents = "none";
         box.classList.toggle('is_clicked');
         box.addEventListener('animationend', function handler1() {
-            box.style.backgroundImage = "url('Images/Paintings/Chibi/static_avatar.PNG')"
+            box.style.backgroundImage = "url('Images/Paintings/Chibi/static_avatar.PNG')";
             document.getElementById('fursone').classList.remove('is_clicked');
             box.style.pointerEvents = "auto";
             void box.offsetWidth;
@@ -23,19 +23,59 @@ box.addEventListener('click', () => {
     }
 
     else {
-        if ( i === 10 ) {
-
-        }
-        i++;
-        let index = Math.floor(Math.random()*4);
+        let index = Math.floor(Math.random()*phrases.length);
         const txt = document.getElementById('dynamic_txt');
-        txt.textContent = phrases[index];
-        txt.classList.toggle('talk');
-        box.style.pointerEvents = "none";
-        txt.addEventListener('animationend', function handler1() {
-            txt.classList.remove('talk');
-            box.style.pointerEvents = "auto";
-        });
+        if (index === 0) {
+            txt.textContent = '';
+            txt.style.backgroundImage = "url('Images/Paintings/Gallery/Furry/Hamster.jpg')"
+            txt.style.backgroundSize = "60%";
+            txt.style.backgroundPosition = "center";
+            txt.style.backgroundRepeat = "no-repeat"
+            txt.classList.toggle('talk');
+            box.style.pointerEvents = "none";
+            txt.addEventListener('animationend', function handler1() {
+                txt.classList.remove('talk');
+                box.style.pointerEvents = "auto";
+                txt.style.backgroundImage = "none"
+            });
+        }
+        else if (index === 1) {
+            txt.textContent = '';
+            txt.style.backgroundImage = "url('Images/Noga.jpg')"
+            txt.style.backgroundSize = "60%";
+            txt.style.backgroundPosition = "center";
+            txt.style.backgroundRepeat = "no-repeat"
+            txt.classList.toggle('talk');
+            box.style.pointerEvents = "none";
+            txt.addEventListener('animationend', function handler1() {
+                txt.classList.remove('talk');
+                box.style.pointerEvents = "auto";
+                txt.style.backgroundImage = "none"
+            });
+        }
+        else if (index === 2) {
+            txt.textContent = '';
+            txt.style.backgroundImage = "url('Images/Paintings/Gallery/Furry/Family.jpg')"
+            txt.style.backgroundSize = "60%";
+            txt.style.backgroundPosition = "center";
+            txt.style.backgroundRepeat = "no-repeat"
+            txt.classList.toggle('talk');
+            box.style.pointerEvents = "none";
+            txt.addEventListener('animationend', function handler1() {
+                txt.classList.remove('talk');
+                box.style.pointerEvents = "auto";
+                txt.style.backgroundImage = "none"
+            });
+        }
+        else {
+            txt.textContent = phrases[index];
+            txt.classList.toggle('talk');
+            box.style.pointerEvents = "none";
+            txt.addEventListener('animationend', function handler1() {
+                txt.classList.remove('talk');
+                box.style.pointerEvents = "auto";
+            });
+        }
     }
 });
 
@@ -48,7 +88,7 @@ const container = document.querySelector(".container"),
 let ImageIndex = 0, intervalID;
 const autoSlide = () => {
     clearInterval(intervalID);
-    intervalID = setInterval(() => slideImage(++ImageIndex),2000);
+    intervalID = setInterval(() => slideImage(++ImageIndex),4000);
 }
 autoSlide();
 const slideImage = () => {

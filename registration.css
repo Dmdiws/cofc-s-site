@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background: url("images/regi-auto-background.JPG") no-repeat center center;
+    background: url("Images/Paintings/Backgrounds/regi-auto-background.JPG") no-repeat center center;
     background-size: cover;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,7 @@ a:nth-child(1) {
     align-items: center;
     width: 50px;
     height: 50px;
-    background: rgba(103, 100, 100, 0.1) url("images/back_button.png") no-repeat center center;
+    background: rgba(103, 100, 100, 0.1) url("Images/Icons/back_button.png") no-repeat center center;
     background-size: 80%;
     border-radius: 15px;
     transform: matrix(1, 0, 0, -1, 0, 0);

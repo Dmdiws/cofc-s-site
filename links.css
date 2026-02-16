@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    display: flex;
+    flex-direction: column;
+    background: url("Images/Paintings/Backgrounds/background.jpg") no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 88%;
+    height: 100%;
+    margin: 3% 6%;
+}
+
+#back_toPrices {
+    display: block;
+    width: 4vw;
+    height: 4vw;
+    background: #fbfbfb url("Images/Icons/back_button.png") no-repeat center center;
+    background-size: 80%;
+    border-radius: 2vh;
+    transition: background-color 0.5s ease;
+}
+
+#back_toPrices:hover {
+    background-color: #7e9365;
+    background-size: 100%;
+}
+
+div:first-of-type {
+    margin: 13vh 0;
+    display: flex;
+    flex-direction: column;
+    gap:5vh
+}
+
+div a {
+    display: flex;
+    width: 60%;
+    height: 12vh;
+    margin: 0 20%;
+    border-radius: 2.2vh;
+    background: #fbfbfb;
+    text-align: end;
+    align-content: center;
+    text-decoration: none;
+    color: black;
+    gap:4vw;
+}
+
+img {
+    height: 10vh;
+    width: 10vh;
+    margin: 1vh;
+}
+
+p {
+    display: flex;
+    line-height: 12vh ;
+    text-align: center;
+    font-size: 3vh;
+
+}
+

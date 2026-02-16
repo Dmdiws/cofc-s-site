@@ -12,7 +12,7 @@ header {
 }
 
 body {
-    background: url("images/background.jpg") no-repeat;
+    background: url("Images/Paintings/Backgrounds/background.jpg") no-repeat;
     background-size: cover;
     overflow-x: hidden;
 }
@@ -37,7 +37,7 @@ main {
     display: block;
     width: 4vw;
     height: 4vw;
-    background: rgba(103, 100, 100, 0.1) url("images/back_button.png") no-repeat center center;
+    background: rgba(103, 100, 100, 0.1) url("Images/Icons/back_button.png") no-repeat center center;
     background-size: 80%;
     border-radius: 2vh;
     transition: background-color 0.5s ease;
@@ -74,27 +74,27 @@ div span a{
 }
 
 #first_line #f {
-    background: rgba(103, 100, 100, 0.1) url("images/Pleaner.jpg") no-repeat center center;
+    background: rgba(103, 100, 100, 0.1) url("Images/Paintings/Gallery/Pleaner/Pleaner.jpg") no-repeat center center;
     background-size: 100%;
 }
 
 #first_line #s {
-    background: rgba(103, 100, 100, 0.1) url("images/Scenery.jpg") no-repeat center center;
+    background: rgba(103, 100, 100, 0.1) url("Images/Paintings/Gallery/Scenery/Scenery.jpg") no-repeat center center;
     background-size: 100%;
 }
 
 #first_line #t {
-    background: rgba(103, 100, 100, 0.1) url("images/StillLife.jpg") no-repeat center center;
+    background: rgba(103, 100, 100, 0.1) url("Images/Paintings/Gallery/Still-Life/StillLife.jpg") no-repeat center center;
     background-size: 100%;
 }
 
 #first_line #fo {
-    background: rgba(103, 100, 100, 0.1) url("images/Portrait.jpg") no-repeat center center;
+    background: rgba(103, 100, 100, 0.1) url("Images/Paintings/Gallery/Portraits/Portrait.jpg") no-repeat center center;
     background-size: 100%;
 }
 
 #first_line #fi {
-    background: rgba(103, 100, 100, 0.1) url("images/Furry.JPG") no-repeat center center;
+    background: rgba(103, 100, 100, 0.1) url("Images/Paintings/Gallery/Furry/Furry.JPG") no-repeat center center;
     background-size: 100%;
 }
 
@@ -129,7 +129,7 @@ span div {
     width: 7.5vw;
     border-radius: 1vw;
     height: 4vw;
-    background: #fbfbfb url("images/main_image.JPG") no-repeat 100% center;
+    background: #fbfbfb url("Images/Paintings/Gallery/Furry/main_image.JPG") no-repeat 100% center;
     background-size: cover;
     bottom:-3.5vw;
     z-index: 2;

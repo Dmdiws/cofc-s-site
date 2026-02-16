@@ -3,43 +3,125 @@
     padding: 0 0;
 }
 
-body {
+body, html {
     display: flex;
     flex-direction: column;
-    background: url("images/background.jpg") no-repeat;
+    background: url("Images/Paintings/Backgrounds/background.jpg") no-repeat;
     background-size: cover;
     flex-shrink: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
+
+a {
+    display: block;
+    width: 4vw;
+    height: 4vw;
+    background: #fbfbfb url("Images/Icons/back_button.png") no-repeat center center;
+    background-size: 80%;
+    border-radius: 2vh;
+    transition: background-color 0.5s ease;
+}
+
+a:hover {
+    background-color: #7e9365;
+    background-size: 100%;
+}
+
+#header {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 88%;
+    height: 6%;
+    margin: 3% 6% 0;
+}
+
+a:last-of-type {
+    background-image: url("Images/Icons/social_medias.JPG");
+    transition: background 0.5s ease;
+}
+
+a:last-of-type:hover {
+    background:#fbfbfb url("Images/Icons/social_media_hover.JPG") no-repeat center center;
+    background-size: cover;
+}
+
+#main_content {
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    height: 90%;
+    margin: 1% 35% 0 10%;
+}
+
 
 main {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 60%;
-    margin: 3% 10%;
-    gap: 10vw;
+    width: 30%;
+    height: 80vh;
+    background: #fbfbfb;
+    border: 0.2vh solid black;
+    border-bottom: #fbfbfb;
 }
 
-p {
-    font-weight: bold;
-    font-size: 6vh;
-}
-
-.container {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.img {
-    background: grey url("images/papper.png");
-    background-size:70%;
-    width:30vw;
-    height: 40vh;
-}
-
-.container:last-of-type {
+section:not(#title) {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    padding: 2vh 0;
+    width: 100%;
+    height: 22.5vh;
+    border-bottom: 0.2vh solid black ;
+    text-transform: uppercase;
+}
+
+.main-text {
+    display: flex;
+    width: 100%;
+    text-align: start;
+    text-transform: none;
+    justify-content: space-between;
+    margin: 3vh 10% 0;
+}
+
+main div {
+    width: 80%;
+    margin: 2vh 10%;
+    height: 16vh;
+    text-align: start;
+    text-transform: none;
+}
+
+#header p {
+    text-transform: uppercase;
+}
+#header p:first-of-type {
+    text-transform: uppercase;
+    padding-bottom: 0.5vh;
+}
+
+main span {
+    display: inline-flex;
+    width: 80%;
+    margin: 0.2vh 10%;
+    justify-content: end;
+}
+
+#examples {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 80vh;
+}
+
+#examples img {
+    padding: 1vw;
+    width: 10vw ;
+    height: 22.5vh ;
 }

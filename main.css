@@ -6,7 +6,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background: url("images/background.jpg") no-repeat center center;
+    background: url("Images/Paintings/Backgrounds/background.jpg") no-repeat center center;
     background-size: cover;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -24,7 +24,7 @@ header {
 #profile {
     display: flex;
     float: left;
-    background: grey url("images/user.png") no-repeat center;
+    background: grey url("Images/Icons/user.png") no-repeat center;
     background-size: cover;
     width: 6vh;
     height: 6vh;
@@ -114,43 +114,39 @@ header {
     border-bottom: 0.2vh solid black;
 }
 
-#big_topic {
+.big_topic {
     display: flex;
     background-color: grey;
     align-items: center;
-    background-image: url("images/main_image.JPG");
+    background-image: url("Images/Paintings/Gallery/Furry/main_image.JPG");
     background-size: cover;
     background-position: center center;
-    width: 88%;
+    width: 88vw;
     height: 42.5vh;
     border-radius: 2.5vh;
-    margin: 0 6%;
 }
 
-#indicator {
+.big_topic:nth-child(2) {
+    background: white url("Images/Paintings/Gallery/Main_Page_Scroller.JPG") no-repeat center center;
+    background-size: 70%;
+}
+
+.big_topic:nth-child(3) {
+    background: white url("Images/Paintings/Gallery/Main_paje_scroller2.JPG") no-repeat center center;
+    background-size: 40%;
+}
+
+.container {
     display: flex;
-    list-style: none;
-    gap: 2.5vh;
-    align-items: end;
-    height: 100%;
-    width: 25vw;
-    margin-bottom: 3%;
-    margin-left: 8%;
+    flex-direction: row;
+    width: 88vw;
+    height: 42.5vh;
+    margin: 0 6%;
+    align-items: center;
+    overflow: hidden;
 }
 
-#indicator li {
-    height: 1.3vh;
-    background: #838282;
-    width: 6vw;
-    border-radius: 2.5vh;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-#indicator li.active {
-    background: #fbfbfb;
-}
-
-#big_topic button {
+.container button {
     color: #485935;
     position: absolute;
     border-style: none;
@@ -161,17 +157,26 @@ header {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-#big_topic button:hover {
+.carousel {
+    position: relative;
+    width: 264vw;
+    height: 42.5vh;
+    flex-direction: row;
+    transition: all 0.4s ease;
+    display: inline-flex;
+}
+
+.container button:hover {
     color: #93A267;
     transform: translateX(0.3vw) scale(150%);
 }
 
-#big_topic button:first-of-type:hover {
+.container button:first-of-type:hover {
     color: #93A267;
     transform: translateX(-0.3vw) scale(150%);
 }
 
-#big_topic button:last-of-type {
+.container button:last-of-type {
     position: absolute;
     left: 95%;
 }
@@ -228,7 +233,7 @@ footer {
     display: inline-flex;
     align-items: end;
     border-radius: 3.1vh;
-    background-image: url("images/previous_painting.JPG");
+    background-image: url("Images/Paintings/Gallery/Furry/previous_painting.JPG");
     background-size: cover;
     background-position: center center;
     height: 29.1vh;
@@ -261,7 +266,7 @@ footer {
 }
 
 #images div:last-of-type {
-    background-image: url("images/previous_painting2.JPG");
+    background-image: url("Images/Paintings/Gallery/Furry/previous_painting2.JPG");
     background-size: cover;
     background-position: center center;
 }
@@ -358,7 +363,7 @@ footer {
     width: 13.6vw;
     border-radius: 3.1vh;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    background: grey url("images/Hobby.JPG") no-repeat center -3vh;
+    background: grey url("Images/Paintings/Gallery/Furry/Hobby.JPG") no-repeat center -3vh;
     background-size: cover;
 }
 
@@ -408,7 +413,7 @@ footer {
     border-style: none;
     right: 0.1vw;
     top: -2.5vh;
-    background: url("images/paws.PNG") no-repeat center -3.7vh;
+    background: url("Images/Paintings/Chibi/paws.PNG") no-repeat center -3.7vh;
     background-size: cover;
 }
 

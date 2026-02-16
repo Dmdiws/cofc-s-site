@@ -68,6 +68,9 @@ main {
     background: #fbfbfb;
     border: 0.2vh solid black;
     border-bottom: #fbfbfb;
+    animation: Appear 2s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
 }
 
 section:not(#title) {
@@ -90,28 +93,46 @@ section:not(#title) {
     margin: 3vh 10% 0;
 }
 
-main div {
-    width: 80%;
-    margin: 2vh 10%;
-    height: 16vh;
-    text-align: start;
-    text-transform: none;
+main section {
+    font-size: 2vh;
+    animation: Appear 2s ease forwards;
+    animation-delay: 3s;
+    opacity: 0;
+    pointer-events: none;
 }
 
-#header p {
-    text-transform: uppercase;
+main section p {
+    font-size: 2vh;
+    animation: Appear 2s ease forwards;
+    animation-delay: 3s;
+    opacity: 0;
 }
+
+#header p:last-of-type {
+    text-transform: uppercase;
+    font-size: 2.7vh;
+    animation: Appear 2s ease forwards;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+@keyframes Appear {
+    to {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+
+
 #header p:first-of-type {
     text-transform: uppercase;
     padding-bottom: 0.5vh;
+    font-size: 2.5vh;
+    animation: Appear 2s ease forwards;
+    opacity: 0;
 }
 
-main span {
-    display: inline-flex;
-    width: 80%;
-    margin: 0.2vh 10%;
-    justify-content: end;
-}
 
 #examples {
     display: flex;
@@ -124,4 +145,22 @@ main span {
     padding: 1vw;
     width: 10vw ;
     height: 22.5vh ;
+    opacity: 0;
+    transition: all 0.3s ease;
 }
+
+#main_content:has(main section:nth-of-type(1):hover) #examples img:nth-of-type(1) {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#main_content:has(main section:nth-of-type(2):hover) #examples img:nth-of-type(2) {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#main_content:has(main section:nth-of-type(3):hover) #examples img:nth-of-type(3) {
+    opacity: 1;
+    transform: scale(1.2);
+}
+

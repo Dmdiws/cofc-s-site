@@ -88,14 +88,14 @@ const container = document.querySelector(".container"),
 let ImageIndex = 0, intervalID;
 const autoSlide = () => {
     clearInterval(intervalID);
-    intervalID = setInterval(() => slideImage(++ImageIndex),4000);
+    intervalID = setInterval(() => slideImage(++ImageIndex),1000000000);
 }
+
 autoSlide();
 const slideImage = () => {
     ImageIndex = ImageIndex === images.length ? 0: ImageIndex < 0 ? images.length -1 : ImageIndex;
     carousel.style.transform = `translate(-${ImageIndex*88}vw)`;
 };
-
 container.addEventListener("mouseover", () => clearInterval(intervalID));
 container.addEventListener("mouseleave",autoSlide);
 

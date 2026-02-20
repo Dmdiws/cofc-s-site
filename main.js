@@ -88,7 +88,7 @@ const container = document.querySelector(".container"),
 let ImageIndex = 0, intervalID;
 const autoSlide = () => {
     clearInterval(intervalID);
-    intervalID = setInterval(() => slideImage(++ImageIndex),1000000000);
+    intervalID = setInterval(() => slideImage(++ImageIndex),4000);
 }
 
 autoSlide();
@@ -108,3 +108,5 @@ const updateClick = (e) => {
 
 buttonL.addEventListener("click",updateClick);
 buttonR.addEventListener("click",updateClick);
+
+console.log('3'+'5');
